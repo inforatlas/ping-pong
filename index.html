@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Pong Vertical Pro</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container">
+        <div id="menu" class="overlay flex">
+            <h1>PONG VERTICAL</h1>
+            <p>Escolha a dificuldade:</p>
+            <button onclick="startGame(0.05)">FÁCIL</button>
+            <button onclick="startGame(0.12)">MÉDIO</button>
+            <button onclick="startGame(0.21)">DIFÍCIL</button>
+        </div>
+
+        <div id="pause-screen" class="overlay">
+            <h2>PAUSADO</h2>
+            <button onclick="togglePause()">RETOMAR</button>
+        </div>
+
+        <div class="info">
+            <div id="score">CPU: 0 | VOCÊ: 0</div>
+            <button id="btn-pause-toggle" onclick="togglePause()">PAUSAR</button>
+        </div>
+
+        <canvas id="pong"></canvas>
+    </div>
+    <script src="pong.js"></script>
+</body>
+</html>
